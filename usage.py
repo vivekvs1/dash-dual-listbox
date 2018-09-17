@@ -1,4 +1,4 @@
-import my_dash_component
+import dash_color_picker
 import dash
 from dash.dependencies import Input, Output
 import dash_html_components as html
@@ -9,17 +9,12 @@ app.scripts.config.serve_locally = True
 app.css.config.serve_locally = True
 
 app.layout = html.Div([
-    my_dash_component.ExampleComponent(
-        id='input',
-        value='my-value',
-        label='my-label'
-    ),
-    html.Div(id='output')
+    dash_color_picker.ExampleComponent(color='222'),
 ])
 
-@app.callback(Output('output', 'children'), [Input('input', 'value')])
-def display_output(value):
-    return 'You have entered {}'.format(value)
+# @app.callback(Output('output', 'children'), [Input('input', 'value')])
+# def display_output(value):
+#     return 'You have entered {}'.format(value)
 
 
 if __name__ == '__main__':
