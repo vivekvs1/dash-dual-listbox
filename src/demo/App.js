@@ -10,7 +10,13 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
-            value: ''
+            displayColorPicker: false,
+            color: {
+                r: '222',
+                g: '111',
+                b: '11',
+                a: '1',
+            },
         }
         this.setProps = this.setProps.bind(this);
     }
@@ -21,16 +27,19 @@ class App extends Component {
 
     render() {
         return (
-            <div>
-                <div>Test</div>
-                <ExampleComponent
-                    setProps={this.setProps}
-                    {...this.state}
-                />
-            </div>
-        )
-    }
-}
+                <div>
+                    <div>I want to display color hex here</div>
+                    <ExampleComponent
+                        setProps={this.setProps}
+                        {...this.state}
+                    />
 
-export default App;
+                </div>
+            )
+        }
+    }
+
+    export
+    default
+    App;
 

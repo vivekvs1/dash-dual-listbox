@@ -106,15 +106,15 @@ export default class ExampleComponent extends Component {
         const styles = reactCSS({
             'default': {
                 color: {
-                    width: '36px',
-                    height: '14px',
-                    borderRadius: '2px',
+                    width: '20px',
+                    height: '20px',
+                    borderRadius: '50%',
                     background: `rgba(${ this.state.color.r }, ${ this.state.color.g }, ${ this.state.color.b }, ${ this.state.color.a })`,
                 },
                 swatch: {
-                    padding: '5px',
+                    padding: '4px',
                     background: '#fff',
-                    borderRadius: '1px',
+                    borderRadius: '50%',
                     boxShadow: '0 0 0 1px rgba(0,0,0,.1)',
                     display: 'inline-block',
                     cursor: 'pointer',
@@ -133,9 +133,13 @@ export default class ExampleComponent extends Component {
             },
         });
 
+        // const {setProps, color} =this.props;
+
         return (
             <div>
-                <div style={styles.swatch} onClick={this.handleClick}>
+                <div style={styles.swatch} onClick={
+                    this.handleClick
+                }>
                     <div style={styles.color}/>
                 </div>
                 {this.state.displayColorPicker ? <div style={styles.popover}>
@@ -156,5 +160,10 @@ ExampleComponent.propTypes = {
     /**
      * The ID used to identify this component in Dash callbacks
      */
-    style: PropTypes.string
+    setProps: PropTypes.func,
+
+    /**
+     * The color displayed in the swatch
+     */
+    color: PropTypes.string,
 };

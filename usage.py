@@ -9,7 +9,7 @@ app.scripts.config.serve_locally = True
 app.css.config.serve_locally = True
 
 app.layout = html.Div([
-    dash_color_picker.ExampleComponent(color='222'),
+    dash_color_picker.ExampleComponent(),
 ])
 
 # @app.callback(Output('output', 'children'), [Input('input', 'value')])
