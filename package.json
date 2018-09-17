@@ -1,21 +1,22 @@
 {
-  "name": "my-dash-component",
+  "name": "dash-color-picker",
   "version": "0.0.1",
-  "description": "my-dash-component",
+  "description": "React-color in Dash Original component: https://casesandberg.github.io/react-color/",
   "main": "build/index.js",
   "scripts": {
     "start": "webpack-serve ./webpack.serve.config.js --open",
     "build:js-dev": "webpack --mode development",
     "build:js": "webpack --mode production",
-    "build:py": "node ./extract-meta src/lib/components > my_dash_component/metadata.json && copyfiles package.json my_dash_component && python -c \"import dash; dash.development.component_loader.generate_classes('my_dash_component', 'my_dash_component/metadata.json')\"",
+    "build:py": "node ./extract-meta src/lib/components > dash_color_picker/metadata.json && copyfiles package.json my_dash_component && python -c \"import dash; dash.development.component_loader.generate_classes('my_dash_component', 'my_dash_component/metadata.json')\"",
     "build:all": "npm run build:js & npm run build:py",
     "build:all-dev": "npm run build:js-dev & npm run build:py"
   },
-  "author": "my-name my-email",
-  "license": "my-license",
+  "author": "Vivek Shankar vivekvs1@gmail.com",
+  "license": "MIT",
   "dependencies": {
     "ramda": "^0.25.0",
     "react": "15.4.2",
+    "react-color": "^2.14.1",
     "react-dom": "15.4.2"
   },
   "devDependencies": {
