@@ -107,22 +107,6 @@ ColorPicker.propTypes = {
      */
     id: PropTypes.string,
     /**
-     * The value of the red input
-     */
-    red: PropTypes.string,
-    /**
-     * The value of the green input
-     */
-    green: PropTypes.string,
-    /**
-     * The value of the blue input
-     */
-    blue: PropTypes.string,
-    /**
-     * The value of the alpha input
-     */
-    alpha: PropTypes.string,
-    /**
      * The value of the hex input
      */
     color: PropTypes.string,

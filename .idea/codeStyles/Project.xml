@@ -1,5 +1,8 @@
 <component name="ProjectCodeStyleConfiguration">
   <code_scheme name="Project" version="173">
+    <codeStyleSettings language="JSON">
+      <option name="SPACE_BEFORE_COMMA" value="true" />
+    </codeStyleSettings>
     <codeStyleSettings language="JavaScript">
       <option name="IF_BRACE_FORCE" value="3" />
       <option name="DOWHILE_BRACE_FORCE" value="3" />

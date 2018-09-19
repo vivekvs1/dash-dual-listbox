@@ -1,4 +1,4 @@
-import dash_color_picker
+from dash_color_picker import ColorPicker
 import dash
 from dash.dependencies import Input, Output
 import dash_html_components as html
@@ -9,7 +9,7 @@ app.scripts.config.serve_locally = True
 app.css.config.serve_locally = True
 
 app.layout = html.Div([
-    dash_color_picker.ColorPicker(id='ColorPicker', color='#f22'),
+    ColorPicker(id='ColorPicker', color='#f22'),
     html.Div([], id='display')
 ])
 
