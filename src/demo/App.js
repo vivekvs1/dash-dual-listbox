@@ -11,10 +11,10 @@ class App extends Component {
         super();
         this.state = {
             displayColorPicker: false,
-            color: {
-                r: '222',
-                g: '111',
-                b: '11',
+            Color: {
+                r: '68',
+                g: '32',
+                b: '28',
                 a: '1',
             },
         }
@@ -28,12 +28,7 @@ class App extends Component {
     render() {
         return (
                 <div>
-                    <div>I want to display color hex here</div>
-                    <ExampleComponent
-                        setProps={this.setProps}
-                        {...this.state}
-                    />
-
+                    <ExampleComponent hex='#f22'/>
                 </div>
             )
         }

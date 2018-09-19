@@ -9,12 +9,15 @@ app.scripts.config.serve_locally = True
 app.css.config.serve_locally = True
 
 app.layout = html.Div([
-    dash_color_picker.ExampleComponent(),
+    dash_color_picker.ExampleComponent(id='ColorPicker', color='#f22'),
+    html.Div([], id='display')
 ])
 
-# @app.callback(Output('output', 'children'), [Input('input', 'value')])
-# def display_output(value):
-#     return 'You have entered {}'.format(value)
+@app.callback(Output('display', 'children'),
+              [Input('ColorPicker', 'color'),
+])
+def display_output(c):
+    return 'You have entered {}'.format(c)
 
 
 if __name__ == '__main__':

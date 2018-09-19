@@ -8,17 +8,24 @@ class ExampleComponent(Component):
 
 
 Keyword arguments:
-- style (string; optional): The ID used to identify this component in Dash callbacks
+- id (string; optional): The ID of this component, used to identify dash components
+in callbacks. The ID needs to be unique across all of the
+components in an app.
+- red (string; optional): The value of the red input
+- green (string; optional): The value of the green input
+- blue (string; optional): The value of the blue input
+- alpha (string; optional): The value of the alpha input
+- color (string; optional): The value of the hex input
 
 Available events: """
     @_explicitize_args
-    def __init__(self, style=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['style']
+    def __init__(self, id=Component.UNDEFINED, red=Component.UNDEFINED, green=Component.UNDEFINED, blue=Component.UNDEFINED, alpha=Component.UNDEFINED, color=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'red', 'green', 'blue', 'alpha', 'color']
         self._type = 'ExampleComponent'
         self._namespace = 'dash_color_picker'
         self._valid_wildcard_attributes =            []
         self.available_events = []
-        self.available_properties = ['style']
+        self.available_properties = ['id', 'red', 'green', 'blue', 'alpha', 'color']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

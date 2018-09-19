@@ -31,12 +31,54 @@
       }
     ],
     "props": {
-      "style": {
+      "id": {
         "type": {
           "name": "string"
         },
         "required": false,
-        "description": "The ID used to identify this component in Dash callbacks"
+        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
+      },
+      "red": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The value of the red input"
+      },
+      "green": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The value of the green input"
+      },
+      "blue": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The value of the blue input"
+      },
+      "alpha": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The value of the alpha input"
+      },
+      "color": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The value of the hex input"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": ""
       }
     }
   }
