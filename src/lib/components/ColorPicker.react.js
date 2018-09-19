@@ -4,7 +4,7 @@ import {SketchPicker} from 'react-color';
 import reactCSS from 'reactcss';
 
 
-export default class ExampleComponent extends Component {
+export default class ColorPicker extends Component {
 
     constructor(props) {
         super(props);
@@ -12,7 +12,7 @@ export default class ExampleComponent extends Component {
         this.state = {
             displayColorPicker: false,
             color: {
-                hex: props.hex
+                hex: props.color
             }
         }
         this.handleClick = this.handleClick.bind(this);
@@ -98,7 +98,7 @@ export default class ExampleComponent extends Component {
 }
 
 
-ExampleComponent.propTypes = {
+ColorPicker.propTypes = {
 
     /**
      * The ID of this component, used to identify dash components

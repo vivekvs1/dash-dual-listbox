@@ -1,6 +1,6 @@
-from .ExampleComponent import ExampleComponent
+from .ColorPicker import ColorPicker
 
 
 __all__ = [
-    "ExampleComponent",
+    "ColorPicker",
 ]

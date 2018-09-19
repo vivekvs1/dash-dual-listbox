@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import * as R from 'ramda';
 
-import {ExampleComponent} from '../lib';
+import {ColorPicker} from '../lib';
 
 class App extends Component {
 
@@ -12,10 +12,7 @@ class App extends Component {
         this.state = {
             displayColorPicker: false,
             Color: {
-                r: '68',
-                g: '32',
-                b: '28',
-                a: '1',
+                hex:'#f22'
             },
         }
         this.setProps = this.setProps.bind(this);
@@ -28,7 +25,7 @@ class App extends Component {
     render() {
         return (
                 <div>
-                    <ExampleComponent hex='#f22'/>
+                    <ColorPicker color='#f22'/>
                 </div>
             )
         }

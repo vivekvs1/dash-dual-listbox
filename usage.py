@@ -9,7 +9,7 @@ app.scripts.config.serve_locally = True
 app.css.config.serve_locally = True
 
 app.layout = html.Div([
-    dash_color_picker.ExampleComponent(id='ColorPicker', color='#f22'),
+    dash_color_picker.ColorPicker(id='ColorPicker', color='#f22'),
     html.Div([], id='display')
 ])
 

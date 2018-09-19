@@ -1,7 +1,7 @@
 {
-  "src/lib/components/ExampleComponent.react.js": {
+  "src/lib/components/ColorPicker.react.js": {
     "description": "",
-    "displayName": "ExampleComponent",
+    "displayName": "ColorPicker",
     "methods": [
       {
         "name": "handleClick",
