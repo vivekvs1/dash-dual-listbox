@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+dash_dual_listbox/DualList.py
+dash_dual_listbox/__init__.py
+dash_dual_listbox/_imports_.py
+dash_dual_listbox/bundle.js
+dash_dual_listbox/metadata.json
+dash_dual_listbox/package.json
+dash_dual_listbox/style.css
+dash_dual_listbox.egg-info/PKG-INFO
+dash_dual_listbox.egg-info/SOURCES.txt
+dash_dual_listbox.egg-info/dependency_links.txt
+dash_dual_listbox.egg-info/top_level.txt

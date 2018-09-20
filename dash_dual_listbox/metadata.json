@@ -1,0 +1,186 @@
+{
+  "src/lib/components/DualList.react.js": {
+    "description": "",
+    "displayName": "DualList",
+    "methods": [
+      {
+        "name": "onMove",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "selected",
+            "type": null
+          }
+        ],
+        "returns": null
+      }
+    ],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
+      },
+      "selected": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "union",
+            "value": [
+              {
+                "name": "string"
+              }
+            ]
+          }
+        },
+        "required": true,
+        "description": "List of selected options, will appear in the right box"
+      },
+      "available": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "union",
+            "value": [
+              {
+                "name": "shape",
+                "value": {
+                  "value": {
+                    "name": "any",
+                    "required": true
+                  },
+                  "label": {
+                    "name": "string",
+                    "required": true
+                  }
+                }
+              },
+              {
+                "name": "shape",
+                "value": {
+                  "value": {
+                    "name": "any",
+                    "required": false
+                  },
+                  "options": {
+                    "name": "arrayOf",
+                    "value": {
+                      "name": "shape",
+                      "value": {
+                        "value": {
+                          "name": "any",
+                          "required": true
+                        },
+                        "label": {
+                          "name": "string",
+                          "required": true
+                        }
+                      }
+                    },
+                    "required": false
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "required": true,
+        "description": "List of available options, will appear in the left box"
+      },
+      "leftLabel": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "A header for the left (available) list"
+      },
+      "rightLabel": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "A header for the right (selected) list"
+      },
+      "searchable": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "A false value will hide the search field on the top"
+      },
+      "sortable": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "A false value will hide the reorder buttons on the right"
+      },
+      "moveLeftIcon": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "fontawesome icons or icon of your choice"
+      },
+      "moveRightIcon": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "fontawesome icons or icon of your choice"
+      },
+      "moveAllLeftIcon": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "fontawesome icons or icon of your choice"
+      },
+      "moveAllRightIcon": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "fontawesome icons or icon of your choice"
+      },
+      "moveUpIcon": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "fontawesome icons or icon of your choice"
+      },
+      "moveTopIcon": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "fontawesome icons or icon of your choice"
+      },
+      "moveDownIcon": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "fontawesome icons or icon of your choice"
+      },
+      "moveBottomIcon": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "fontawesome icons or icon of your choice"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": ""
+      }
+    }
+  }
+}
