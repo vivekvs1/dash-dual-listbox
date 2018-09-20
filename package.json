@@ -1,13 +1,13 @@
 {
-  "name": "dash-color-picker",
+  "name": "dash-dual-listbox",
   "version": "0.0.1",
-  "description": "React-color in Dash Original component: https://casesandberg.github.io/react-color/",
+  "description": "Dual listbox for Dash. Original component: https://rawgit.com/jyotirmaybanerjee/react-duallist/master/example/examples.html# ",
   "main": "build/index.js",
   "scripts": {
     "start": "webpack-serve ./webpack.serve.config.js --open",
     "build:js-dev": "webpack --mode development",
     "build:js": "webpack --mode production",
-    "build:py": "node ./extract-meta src/lib/components > dash_color_picker/metadata.json && copyfiles package.json dash_color_picker && python -c \"import dash; dash.development.component_loader.generate_classes('dash_color_picker', 'dash_color_picker/metadata.json')\"",
+    "build:py": "node ./extract-meta src/lib/components > dash_dual_listbox/metadata.json && copyfiles package.json dash_dual_listbox && python -c \"import dash; dash.development.component_loader.generate_classes('dash_dual_listbox', 'dash_dual_listbox/metadata.json')\"",
     "build:all": "npm run build:js & npm run build:py",
     "build:all-dev": "npm run build:js-dev & npm run build:py"
   },
@@ -16,8 +16,8 @@
   "dependencies": {
     "ramda": "^0.25.0",
     "react": "15.4.2",
-    "react-color": "^2.14.1",
-    "react-dom": "15.4.2"
+    "react-dom": "15.4.2",
+    "react-duallist": "^1.1.5"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

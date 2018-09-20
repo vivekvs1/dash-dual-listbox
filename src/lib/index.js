@@ -1,6 +1,6 @@
 /* eslint-disable import/prefer-default-export */
-import ColorPicker from './components/ColorPicker.react';
+import DualList from './components/DualList.react.js';
 
 export {
-    ColorPicker
+    DualList
 };

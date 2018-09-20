@@ -13,7 +13,7 @@ class Tests(IntegrationTests):
         app = dash.Dash(__name__)
         app.layout = html.Div([
             html.Div(id='waitfor'),
-            ColorPicker(id='ColorPicker', color='#f22')
+            ColorPicker(id='DualList', color='#f22')
         ])
 
         self.startServer(app)

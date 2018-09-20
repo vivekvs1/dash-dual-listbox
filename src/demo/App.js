@@ -1,37 +1,43 @@
-/* eslint no-magic-numbers: 0 */
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import * as R from 'ramda';
-
-import {ColorPicker} from '../lib';
+import {DualList} from '../lib';
+import './style.css';
 
 class App extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-            displayColorPicker: false,
-            Color: {
-                hex:'#f22'
-            },
+            available: [
+                {label: 'sdf', value: 'AL'},
+                {label: 'Alassdfsdfka', value: 'AK'},
+                {label: 'Arizona', value: 'AZ'},
+                {label: 'Arkansas', value: 'AR'},
+                {label: 'California', value: 'CA'},
+                {label: 'Colorado', value: 'CO'},
+                {label: 'sdfg', value: 'CT'},
+                {label: 'Delaware', value: 'DE'},
+                {label: 'Florida', value: 'FL'},
+                {label: 'Georgia', value: 'GA'},
+            ],
+            selected: ['AL', 'CA', 'AK'],
         }
-        this.setProps = this.setProps.bind(this);
-    }
 
-    setProps(newProps) {
-        this.setState(newProps);
     }
 
     render() {
+        const {available, selected} = this.state;
+        const leftLabel = ['Apple']
+        const rightLabel = ['Apple']
+
+
         return (
-                <div>
-                    <ColorPicker color='#f22'/>
-                </div>
-            )
-        }
+            <div><DualList
+                available={available} selected={selected}  leftLabel={leftLabel} rightLabel={rightLabel} searchable={false}
+
+            /></div>
+
+        );
     }
+}
 
-    export
-    default
-    App;
-
+export default App;

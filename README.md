@@ -1,1 +1,1 @@
-React-color in Dash Original component: https://casesandberg.github.io/react-color/
+Dual listbox for Dash. Original component: https://rawgit.com/jyotirmaybanerjee/react-duallist/master/example/examples.html#

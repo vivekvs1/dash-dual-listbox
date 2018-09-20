@@ -1,0 +1,139 @@
+.react-listbox-dual-list {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+.react-listbox-dual-list * {
+    box-sizing: border-box;
+}
+
+.react-listbox-dual-list input:disabled, .react-listbox-dual-list select:disabled {
+    background: #eee;
+    cursor: not-allowed;
+}
+
+.react-listbox-dual-list button, .react-listbox-dual-list select {
+    line-height: 1.42857;
+    font-family: inherit;
+}
+
+.react-listbox-dual-list .react-listbox-list-box {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    align-self: stretch;
+}
+
+.react-listbox-dual-list .react-listbox-list-box .search-bar {
+    margin-bottom: 5px;
+}
+
+.react-listbox-dual-list .react-listbox-list-box select {
+    min-height: 150px;
+}
+
+.react-listbox-dual-list .react-listbox-list-box .list-filter, .react-listbox-dual-list .react-listbox-list-box .list-control {
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 8px 12px;
+    width: 100%;
+    color: #333;
+    font-size: 14px;
+}
+
+.react-listbox-dual-list .react-listbox-list-box .list-filter {
+    margin-bottom: 10px;
+}
+
+.react-listbox-dual-list .react-listbox-center-toolbar {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    margin: 55px 10px 0 10px;
+}
+
+.react-listbox-dual-list .react-listbox-center-toolbar .move-left, .react-listbox-dual-list .react-listbox-center-toolbar .move-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.react-listbox-dual-list .react-listbox-center-toolbar .move-right {
+    margin-bottom: 10px;
+}
+
+.react-listbox-dual-list .react-listbox-right-toolbar {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    margin: 55px 10px 0 10px;
+}
+
+.react-listbox-dual-list .react-listbox-right-toolbar .move-top, .react-listbox-dual-list .react-listbox-right-toolbar .move-bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.react-listbox-dual-list .react-listbox-right-toolbar .move-top {
+    margin-bottom: 10px;
+}
+
+.react-listbox-dual-list .btn-move {
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background: #fff;
+    cursor: pointer;
+    padding: 5px 10px;
+    color: #333;
+    font-size: 12px;
+}
+
+.react-listbox-dual-list .btn-move:active:not(:disabled), .react-listbox-dual-list .btn-move:focus:not(:disabled) {
+    border-color: #8c8c8c;
+    background: #e6e6e6;
+}
+
+.react-listbox-dual-list .btn-move:focus:not(:disabled) {
+    outline: thin dotted;
+    outline-offset: -2px;
+}
+
+.react-listbox-dual-list .btn-move:hover:not(:disabled) {
+    border-color: #adadad;
+    background: #e6e6e6;
+}
+
+.react-listbox-dual-list .btn-move:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.react-listbox-dual-list .btn-move:last-child {
+    margin-bottom: 0;
+}
+
+.react-listbox-dual-list .btn-move i {
+    margin: 0 -1px;
+}
+
+.react-listbox-dual-list .list-container {
+    display: flex;
+    flex: 1 0 auto;
+}
+
+.react-listbox-dual-list .list-label {
+    position: absolute;
+    clip: rect(0 0 0 0);
+}
+
+.react-listbox-dual-list .list-control {
+    flex: 1 0 auto;
+}
+
+.react-listbox-dual-list .list-control optgroup {
+    font: inherit;
+    font-weight: 700;
+}
