@@ -26,8 +26,8 @@ class App extends Component {
 
     render() {
         const {available, selected} = this.state;
-        const leftLabel = ['Apple']
-        const rightLabel = ['Apple']
+        const leftLabel = ['Left Editable label']
+        const rightLabel = ['Right Editable label']
 
 
         return (

@@ -7,69 +7,31 @@ class DualList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            available: props.available,
             selected: props.selected,
-            leftLabel: props.leftLabel,
-            rightLabel: props.rightLabel,
-            searchable: props.searchable,
-            sortable: props.sortable,
-            moveLeftIcon: props.moveLeftIcon,
-            moveRightIcon: props.moveRightIcon,
-            moveAllLeftIcon: props.moveAllLeftIcon,
-            moveAllRightIcon: props.moveAllRightIcon,
-            moveUpIcon: props.moveUpIcon,
-            moveTopIcon: props.moveTopIcon,
-            moveDownIcon: props.moveDownIcon,
-            moveBottomIcon: props.moveBottomIcon
         }
 
         this.onMove = this.onMove.bind(this);
     }
 
-    componentWillReceiveProps(nextProps) {
-        this.setState({
-            available: nextProps.available,
-            selected: nextProps.selected,
-            leftLabel: nextProps.leftLabel,
-            rightLabel: nextProps.rightLabel,
-            searchable: nextProps.searchable,
-            sortable: nextProps.sortable,
-            moveLeftIcon: nextProps.moveLeftIcon,
-            moveRightIcon: nextProps.moveRightIcon,
-            moveAllLeftIcon: nextProps.moveAllLeftIcon,
-            moveAllRightIcon: nextProps.moveAllRightIcon,
-            moveUpIcon: nextProps.moveUpIcon,
-            moveTopIcon: nextProps.moveTopIcon,
-            moveDownIcon: nextProps.moveDownIcon,
-            moveBottomIcon: nextProps.moveBottomIcon
-        });
-    }
 
     onMove(selected) {
         this.setState({selected});
 
-        // const {setProps} = this.props;
-        // if (setProps) {
-        //     setProps({selected: selected})
-        // }
+        const {setProps} = this.props;
+        if (setProps) {
+            setProps({selected: selected})
+        }
 
     }
 
 
     render() {
-        const {
-            available, selected, leftLabel, rightLabel, searchable, sortable, moveLeftIcon, moveRightIcon,
-            moveAllLeftIcon, moveAllRightIcon, moveUpIcon, moveTopIcon, moveDownIcon, moveBottomIcon
-        } = this.state;
 
-        // language=HTML
+
         return (
             <div>
                 <Duallist
-                    available={available} selected={selected} onMove={this.onMove} leftLabel={leftLabel}
-                    rightLabel={rightLabel} searchable={searchable} sortable={sortable} moveLeftIcon={moveLeftIcon} moveRightIcon={moveRightIcon}
-                    moveAllLeftIcon={moveAllLeftIcon} moveAllRightIcon={moveAllRightIcon} moveUpIcon={moveUpIcon} moveTopIcon={moveTopIcon}
-                    moveDownIcon={moveDownIcon} moveBottomIcon={moveBottomIcon}
+                    {...this.props} selected={this.state.selected} onMove={this.onMove}
                 />
             </div>
 
