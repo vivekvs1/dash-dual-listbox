@@ -29,9 +29,9 @@ venv
 *.pyc
 
 # builds
-my_dash_component.egg-info
+*.egg-info
+*.tar.gz
 dist
 *__pycache__*
 __pycache__/
 
-*.pyc
