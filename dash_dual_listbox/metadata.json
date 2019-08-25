@@ -14,6 +14,30 @@
           }
         ],
         "returns": null
+      },
+      {
+        "name": "onSelectInLeft",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "selectedLeft",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "onSelectInRight",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "selectedRight",
+            "type": null
+          }
+        ],
+        "returns": null
       }
     ],
     "props": {
@@ -22,7 +46,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
       },
       "selected": {
         "type": {
@@ -89,6 +113,36 @@
         },
         "required": true,
         "description": "List of available options, will appear in the left box"
+      },
+      "selectedLeft": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "union",
+            "value": [
+              {
+                "name": "string"
+              }
+            ]
+          }
+        },
+        "required": false,
+        "description": "List of selected options in the box on the left before move"
+      },
+      "selectedRight": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "union",
+            "value": [
+              {
+                "name": "string"
+              }
+            ]
+          }
+        },
+        "required": false,
+        "description": "List of selected options in the box on the right before move"
       },
       "leftLabel": {
         "type": {

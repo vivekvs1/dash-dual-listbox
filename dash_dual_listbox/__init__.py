@@ -32,15 +32,18 @@ _this_module = _sys.modules[__name__]
 _js_dist = [
     {
         'relative_package_path': 'bundle.js',
-        'external_url': (
-            'https://unpkg.com/my_dash_component'
-            '/' + package_name + '/bundle.js'
-        ).format(__version__),
+        'external_url': '',
         'namespace': package_name
     }
 ]
 
-_css_dist = []
+_css_dist = [
+    {
+        'relative_package_path': 'style.css',
+        'external_url': '',
+        'namespace': package_name
+    }
+]
 
 
 for _component in _components:
