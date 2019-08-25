@@ -6,35 +6,58 @@ class DualList extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            selected: props.selected,
-        }
-
+        this.state = {selected: props.selected}
         this.onMove = this.onMove.bind(this);
+        this.onSelectInLeft = this.onSelectInLeft.bind(this);
+        this.onSelectInRight = this.onSelectInRight.bind(this);
     }
 
 
     onMove(selected) {
+        if (selected.length > this.state.selected.length) {
+            this.props.setProps({selectedLeft: null});
+        } else if (selected.length < this.state.selected.length) {
+            this.props.setProps({selectedRight: null});
+        }
+
         this.setState({selected});
 
         const {setProps} = this.props;
         if (setProps) {
-            setProps({selected: selected})
+            setProps({selected: selected});
         }
+    }
 
+
+    onSelectInLeft(selectedLeft) {
+        const {setProps} = this.props;
+        if (setProps) {
+            setProps({selectedLeft: selectedLeft});
+        }
+    }
+
+
+    onSelectInRight(selectedRight) {
+        const {setProps} = this.props;
+        if (setProps) {
+            setProps({selectedRight: selectedRight});
+        }
     }
 
 
     render() {
-
-
         return (
             <div>
                 <Duallist
-                    {...this.props} selected={this.state.selected} onMove={this.onMove}
+                    {...this.props} 
+                    selected={this.state.selected} 
+                    selectedLeft={this.state.selectedLeft} 
+                    selectedRight={this.state.selectedRight} 
+                    onMove={this.onMove}
+                    onSelectInLeft={this.onSelectInLeft}
+                    onSelectInRight={this.onSelectInRight}
                 />
             </div>
-
         );
     }
 }
@@ -75,6 +98,18 @@ DualList.propTypes = {
             }),
         ]),
     ).isRequired,
+
+    /**
+     * List of selected options in the box on the left before move
+     */
+    selectedLeft: PropTypes.arrayOf(
+        PropTypes.oneOfType([PropTypes.string])),
+
+    /**
+     * List of selected options in the box on the right before move
+     */
+    selectedRight: PropTypes.arrayOf(
+        PropTypes.oneOfType([PropTypes.string])),
 
     /**
      * A header for the left (available) list
