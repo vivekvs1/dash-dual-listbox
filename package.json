@@ -1,7 +1,7 @@
 {
   "name": "dash-dual-listbox",
   "version": "0.0.1",
-  "description": "Dual listbox for Dash. Original component: https://rawgit.com/jyotirmaybanerjee/react-duallist/master/example/examples.html# ",
+  "description": "Dual listbox for Dash. Original component: https://raw.githack.com/jyotirmaybanerjee/react-duallist/master/example/examples.html# ",
   "main": "build/index.js",
   "scripts": {
     "start": "webpack-serve ./webpack.serve.config.js --open",
